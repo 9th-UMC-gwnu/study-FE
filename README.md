@@ -66,5 +66,5 @@
 
 ```bash
 // 커밋 메시지
-[week1/mission] 미션 제목
+week1/mission : 미션 제목
 ```
