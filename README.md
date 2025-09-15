@@ -58,11 +58,13 @@
 | practice | 실습 수행           |
 | workbook | 워크북 정리         |
 | refactor | 코드 리팩토링       |
+|  feat   | 기타 기능추가       |
 |   fix    | 버그 수정           |
 |   docs   | 문서 수정           |
 | comment  | 주석 추가 및 변경   |
 |  remove  | 파일 혹은 폴더 삭제 |
 |  chore   | 기타 변경사항       |
+
 
 ```bash
 // 커밋 메시지
