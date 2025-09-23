@@ -1,9 +1,11 @@
 import "./App.css";
+import { StudyApp } from "./study";
+//index.ts 도입
 
 function App() {
   return (
     <>
-      <h4 className="text-9xl">Hello </h4>
+      <StudyApp />
     </>
   );
 }
