@@ -5,6 +5,7 @@ const AppRoute = () => {
   return (
     <Routes>
       <Route path="/week1-mission1" element={<TodoPage />} />
+      <Route path="/week2-mission1" element={<TodoPage />} />
       <Route path="/" element={<HomePage />} />
     </Routes>
   )
@@ -14,6 +15,7 @@ const AppNav = () => {
   return (
     <div className="flex flex-col items-center">
       <Link to="/week1-mission1">1week-mission1</Link>
+      <Link to="/week2-mission1">2week-mission1</Link>
     </div>
   );
 };
