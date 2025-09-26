@@ -1,11 +1,12 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import TodoPage from "./week-no/week-1/mission/mission1"
+import TodoPage2 from "./week-no/week-2/mission/mission1";
 
 const AppRoute = () => {
   return (
     <Routes>
       <Route path="/week1-mission1" element={<TodoPage />} />
-      <Route path="/week2-mission1" element={<TodoPage />} />
+      <Route path="/week2-mission1" element={<TodoPage2 />} />
       <Route path="/" element={<HomePage />} />
     </Routes>
   )
