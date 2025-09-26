@@ -17,7 +17,7 @@ export default function TodoList({ title, type }: TodoListProps) {
 
     return (
         <section>
-            <h3 className="text-center text-2xl font-bold mb-4">{title}</h3>
+            <h3 className="text-center text-2xl font-bold mb-4 dark:text-white">{title}</h3>
             <div className="space-y-3">
                 {todosToRender.map((todo) => (
                     <TodoCard

@@ -22,7 +22,7 @@ const TodoCard = React.memo(function TodoCard({
     };
 
     return (
-        <div className="flex items-center justify-between rounded-[12px] bg-gray-100 p-4 shadow-lg mb-4">
+        <div className="flex items-center justify-between rounded-[12px] bg-gray-100 p-4 shadow-lg mb-4 dark:bg-gray-400">
             <p className="text-xl font-semibold">{todo.name}</p>
             <button onClick={handleClick} 
             className={`
