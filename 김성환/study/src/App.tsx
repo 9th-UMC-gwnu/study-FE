@@ -1,10 +1,13 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import TodoPage from "./week-no/week-1/mission/mission1"
+import TodoPage2 from "./week-no/week-2/mission/mission1";
+import { ThemeProvider } from "./week-no/week-2/mission/mission2/ThemeContext";
 
 const AppRoute = () => {
   return (
     <Routes>
       <Route path="/week1-mission1" element={<TodoPage />} />
+      <Route path="/week2-mission1" element={<TodoPage2 />} />
       <Route path="/" element={<HomePage />} />
     </Routes>
   )
@@ -12,8 +15,9 @@ const AppRoute = () => {
 
 const AppNav = () => {
   return (
-    <div className="flex flex-col items-center">
-      <Link to="/week1-mission1">1week-mission1</Link>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <Link to="/week1-mission1" className="linkStyle">1week-mission1</Link>
+      <Link to="/week2-mission1" className="linkStyle">2week-mission1</Link>
     </div>
   );
 };
@@ -25,9 +29,12 @@ const HomePage = () => { // 대충 링크 페이지
 function App() {
 
   return (
-    <BrowserRouter>
+    // 다크 모드 주입 Context
+    <ThemeProvider>
+      <BrowserRouter>
         <AppRoute />
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
