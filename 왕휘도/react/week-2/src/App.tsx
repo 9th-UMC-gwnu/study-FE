@@ -1,6 +1,6 @@
 import "./App.css";
 import Chapter01App from "./chapter01/Chapter01App";
-import StudyApp2 from "./study2/StudyApp2";
+import { ThemeProvider } from "./chapter02/ThemeProvider";
 //import { StudyApp } from "./study";
 // import StudyApp2 from "./study2/StudyApp2";
 //index.ts 도입
@@ -8,7 +8,9 @@ import StudyApp2 from "./study2/StudyApp2";
 function App() {
   return (
     <>
-      <Chapter01App />
+      <ThemeProvider>
+        <Chapter01App />
+      </ThemeProvider>
     </>
   );
 }
