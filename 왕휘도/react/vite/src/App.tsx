@@ -1,6 +1,6 @@
-import Study1Page from "./weeks/week3/study/study1";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
+import PageManager from "./pages/PageManager";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       },
       {
         path: "week/:weekId/project/:projectId", //주소 별로 주차 및 미션, 예제 학습 관리
-        element: <Study1Page />,
+        element: <PageManager />,
       },
     ],
   },
