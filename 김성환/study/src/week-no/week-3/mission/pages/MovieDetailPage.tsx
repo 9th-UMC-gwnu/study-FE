@@ -11,17 +11,17 @@ const IMG = {
 } as const
 
 export default function MovieDetailPage() {
-    const { movieId } = useParams<{ movieId: string }>() // [added]
-    const [detail, setDetail] = useState<MovieDetail | null>(null) // [added]
-    const [credits, setCredits] = useState<Credits | null>(null) // [added]
-    const [loading, setLoading] = useState<boolean>(false) // [added]
-    const [error, setError] = useState<string | null>(null) // [added]
+    const { movieId } = useParams<{ movieId: string }>() 
+    const [detail, setDetail] = useState<MovieDetail | null>(null) 
+    const [credits, setCredits] = useState<Credits | null>(null) 
+    const [loading, setLoading] = useState<boolean>(false) 
+    const [error, setError] = useState<string | null>(null)
 
     const load = useCallback(async (id: string) => {
         setLoading(true)
         setError(null)
         try {
-            const [d, c] = await Promise.all([ // [added] 동시 호출
+            const [d, c] = await Promise.all([ 
                 fetchMovieDetail(id),
                 fetchMovieCredits(id),
             ])
@@ -38,8 +38,8 @@ export default function MovieDetailPage() {
     }, [])
 
     useEffect(() => {
-        if (movieId) load(movieId) // [added]
-    }, [movieId, load]) // [added]
+        if (movieId) load(movieId) 
+    }, [movieId, load]) 
 
     const directors = useMemo(
         () => credits?.crew.filter((m) => m.job === 'Director') ?? [],
