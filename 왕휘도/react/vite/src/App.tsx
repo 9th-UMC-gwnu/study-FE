@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
-import PageManager from "./pages/PageManager";
+// import PageManager from "./pages/PageManager";
+import { ProjectApp } from "./weeks/week3/mission/mission1/pages/ProjectApp";
+import MovieRootLayout from "./weeks/week3/mission/mission1/Layout/RootLayout";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,9 @@ const router = createBrowserRouter([
         element: <></>,
       },
       {
-        path: "week/:weekId/project/:projectId", //주소 별로 주차 및 미션, 예제 학습 관리
-        element: <PageManager />,
+        path: "week/3/project/2/:category",
+        element: <MovieRootLayout />,
+        children: [{ index: true, element: <ProjectApp /> }],
       },
     ],
   },

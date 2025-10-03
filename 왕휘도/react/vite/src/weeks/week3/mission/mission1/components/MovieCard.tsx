@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+/**프랍종류 */
 interface Props {
   img: string;
   title: string;
