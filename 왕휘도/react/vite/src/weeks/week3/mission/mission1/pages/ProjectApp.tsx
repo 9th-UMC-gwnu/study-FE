@@ -108,6 +108,7 @@ export function ProjectApp() {
                 img={movie.poster_path ?? ""}
                 title={movie.title}
                 overview={movie.overview ?? "설명이 없습니다."}
+                movieId={movie.id.toString()}
               />
             </li>
           ))}

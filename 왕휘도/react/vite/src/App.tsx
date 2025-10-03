@@ -3,6 +3,7 @@ import RootLayout from "./layout/RootLayout";
 // import PageManager from "./pages/PageManager";
 import { ProjectApp } from "./weeks/week3/mission/mission1/pages/ProjectApp";
 import MovieRootLayout from "./weeks/week3/mission/mission1/Layout/RootLayout";
+import MovieDetail from "./weeks/week3/mission/mission1/pages/MovieDetail";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         path: "week/3/project/2/:category",
         element: <MovieRootLayout />,
         children: [{ index: true, element: <ProjectApp /> }],
+      },
+      {
+        path: "week/3/project/2/movie/:movieId",
+        element: <MovieDetail />,
       },
     ],
   },

@@ -1,14 +1,27 @@
 import type { JSX } from "react";
+import { useNavigate } from "react-router-dom";
 /**프랍종류 */
 interface Props {
   img: string;
   title: string;
   overview: string;
+  movieId: string;
 }
 
-export const MovieCard = ({ img, title, overview }: Props): JSX.Element => {
+export const MovieCard = ({
+  img,
+  title,
+  overview,
+  movieId,
+}: Props): JSX.Element => {
+  const navigate = useNavigate();
   return (
-    <div className="group relative ">
+    <div
+      className="group relative "
+      onClick={() => {
+        navigate(`/week/3/project/2/movie/${movieId}`);
+      }}
+    >
       <img
         src={`https://image.tmdb.org/t/p/w500${img}`}
         alt={title ?? "movie poster"}
