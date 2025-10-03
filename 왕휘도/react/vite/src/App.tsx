@@ -1,16 +1,13 @@
-import "./App.css";
-import Chapter01App from "./chapter01/Chapter01App";
-import { ThemeProvider } from "./chapter02/ThemeProvider";
-//import { StudyApp } from "./study";
-// import StudyApp2 from "./study2/StudyApp2";
-//index.ts 도입
-
+import { Route, Routes } from "react-router-dom";
+import Study1Page from "./weeks/week3/study/study1";
 function App() {
   return (
     <>
-      <ThemeProvider>
-        <Chapter01App />
-      </ThemeProvider>
+      <Routes>
+        <Route path="/week3/study1" element={Study1Page()} />
+        <Route />
+        <Route />
+      </Routes>
     </>
   );
 }
