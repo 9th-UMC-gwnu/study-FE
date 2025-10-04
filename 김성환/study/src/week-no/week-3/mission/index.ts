@@ -1,0 +1,7 @@
+export { default as MovieHomePage } from './pages/HomePage'
+export { default as NowPlayingPage } from './pages/NowPlayingPage'
+export { default as PopularMoviesPage } from './pages/PopularMoviesPage'
+export { default as TopRatedPage } from './pages/TopRatedPage'
+export { default as UpcomingPage } from './pages/UpcomingPage'
+export { default as Layout } from './layouts/Layout'
+export { default as MovieDetailPage } from './pages/MovieDetailPage'
